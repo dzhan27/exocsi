@@ -643,11 +643,12 @@ def get_env_variables():
         # If the variable exists, points to a real location, but is missing contents
         for item in ['modelgrid', 'fortney', 'exoctk_log', 'generic']:
             if item not in [os.path.basename(item) for item in glob.glob(os.path.join(env_variables['exoctk_data'], '*'))]:
-                raise KeyError('Missing {}/ directory from {}'.format(item, env_variables['exoctk_data']))
+                #raise KeyError('Missing {}/ directory from {}'.format(item, env_variables['exoctk_data']))
+                pass
 
-    env_variables['modelgrid_dir'] = os.path.join(env_variables['exoctk_data'], 'modelgrid/')
-    env_variables['fortgrid_dir'] = os.path.join(env_variables['exoctk_data'], 'fortney/')
-    env_variables['exoctklog_dir'] = os.path.join(env_variables['exoctk_data'], 'exoctk_log/')
+    #env_variables['modelgrid_dir'] = os.path.join(env_variables['exoctk_data'], 'modelgrid/')
+    #env_variables['fortgrid_dir'] = os.path.join(env_variables['exoctk_data'], 'fortney/')
+    #env_variables['exoctklog_dir'] = os.path.join(env_variables['exoctk_data'], 'exoctk_log/')
     env_variables['genericgrid_dir'] = os.path.join(env_variables['exoctk_data'], 'generic/')
 
     return env_variables

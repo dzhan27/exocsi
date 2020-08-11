@@ -38,19 +38,19 @@ app_exoctk = Flask(__name__)
 app_exoctk.config['CACHE_TYPE'] = 'null'
 app_exoctk.config['SECRET_KEY'] = 'Thisisasecret!'
 
-
+'''
 # Load the database to log all form submissions
 if get_env_variables()['exoctklog_dir'] is None:
-    dbpath = ':memory:'
+    #dbpath = ':memory:'
 else:
     dbpath = os.path.realpath(os.path.join(get_env_variables()['exoctklog_dir'], 'exoctk_log.db'))
-    if not os.path.isfile(dbpath):
-        log_exoctk.create_db(dbpath)
+if not os.path.isfile(dbpath):
+    log_exoctk.create_db(dbpath)
 try:
     DB = log_exoctk.load_db(dbpath)
 except IOError:
     DB = None
-
+'''
 
 # Redirect to the index
 @app_exoctk.route('/')
