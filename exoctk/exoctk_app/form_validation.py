@@ -10,12 +10,11 @@ from exoctk.modelgrid import ModelGrid
 from exoctk.utils import get_env_variables, FILTERS, PROFILES
 from svo_filters import svo
 
-
+'''
 class MultiCheckboxField(SelectMultipleField):
     """Makes a list of checkbox inputs"""
     widget = ListWidget(prefix_label=False)
     option_widget = CheckboxInput()
-
 
 class BaseForm(FlaskForm):
     """A generic form with target resolve built in"""
@@ -26,7 +25,6 @@ class BaseForm(FlaskForm):
     # Submit button
     resolve_submit = SubmitField('Resolve Target')
 
-'''
 class FortneyModelForm(BaseForm):
     """Form validation for the forward model tools"""
     # Parameters

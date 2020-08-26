@@ -312,6 +312,7 @@ def rescale_generic_grid(input_args, database_path):
         # Check the model parameters
         str_temp_range = ['0400'] + ['0{}'.format(elem)[-4:] for elem in temp_range]
         model_space = [('condensation', ['local', 'rainout']),
+                        ('RCF', ['0.25', '0.50', '0.75', '1.00']),
                        ('model_temperature', str_temp_range),
                        ('model_gravity', ['05', '10', '20', '50']),
                        ('metallicity', ['+0.0', '+1.0', '+1.7', '+2.0', '+2.3']),
