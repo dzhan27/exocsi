@@ -61,12 +61,14 @@
             </div>
         </div>
     
+        
         <hr class="col-md-12">
         <div class='form-group'>
         
             <label for='mag' class="col-sm-2 control-label">Standard Model Parameters</label>
             <div class="col-sm-6">
-                
+            
+            
                 <div class="input-group">
                 <select id="condensation" name="condensation" class="form-control">
                     <option value="local">local</option>
@@ -77,7 +79,18 @@
             the model in the condensate forming layer and above. Local
             condensation assumes material which condenses is depleted independently in each
             layer of the model atmosphere. </span> 
-       
+                
+                <div class="input-group">
+                    <select id="RCF" name="RCF" class="form-control">
+                        <option value="0.25">0.25</option>  
+                        <option value="0.5">0.5</option>         
+                        <option value="0.75">0.75</option>         
+                        <option value="1.0">1.0</option>             
+                </select>
+                </div>
+                <span id="helpBlock" class="help-block">RCF is the circulation factor.  </span>
+
+
                 <div class="input-group">
                 <select id="metallicity" name="metallicity" class="form-control">
                     <option value="+0.0">1</option>  
